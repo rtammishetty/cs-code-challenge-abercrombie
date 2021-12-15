@@ -1,5 +1,27 @@
+const baseUrl = 'https://615485ee2473940017efaed3.mockapi.io/assessment';
+let source = $("#users-template").html();
+let template = Handlebars.compile(source);
+
+
+// // Using Fetch API
+fetch(baseUrl)
+    .then(response => response.json())
+    .then(response => {
+        for (let i = 0; i < response.length; i++) {
+            let data = response[i];
+            let dataStamp = {
+                name: data.name,
+                avatar: data.avatar
+            }
+            let templates = template(dataStamp)
+            $('.content-placeholder').append(templates);
+        }
+    });
+
+
+
 // // Using jQuery
-var baseUrl = 'https://615485ee2473940017efaed3.mockapi.io/assessment';
+/*
 $.ajax({
     url: baseUrl,
     method: 'GET',
@@ -11,16 +33,15 @@ $.ajax({
     }
 });
 
-var source = $("#users-template").html();
-var template = Handlebars.compile(source);
 function showData(datas) {
-    for (var i = 0; i < datas.length; i++) {
-        var data = datas[i];
-        var dataStamp = {
+    for (let i = 0; i < datas.length; i++) {
+        let data = datas[i];
+        let dataStamp = {
             name: data.name,
             avatar: data.avatar
         }
-        var templates = template(dataStamp)
+        let templates = template(dataStamp)
         $('.content-placeholder').append(templates);
     }
 }
+*/

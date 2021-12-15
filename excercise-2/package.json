@@ -1,0 +1,16 @@
+{
+  "name": "assessment-2",
+  "version": "1.0.0",
+  "description": "assessment-2",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass --include-path scss styles/styles.scss styles/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rajesh",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

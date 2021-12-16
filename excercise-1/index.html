@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fetch API Demo</title>
+        <title>Consuming RESTful API data</title>
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js" integrity="sha256-ZafrO8ZXERYO794Tx1hPaAcdcXNZUNmXufXOSe0Hxj8=" crossorigin="anonymous"></script>
@@ -19,7 +19,9 @@
             <div id="test">
                 <ul class="list-group">
                     <li class="list-group-item">Name: {{name}} </li>
-                    <li class="list-group-item">Avatar: {{avatar}} </li>
+                    <li class="list-group-item">Avatar: <img src="{{avatar}}"></li>
+                    <li class="list-group-item">ID: {{id}} </li>
+                    <li class="list-group-item">Created Date: {{createdAt}} </li>
                     <!-- <li class="list-group-item hidden">ID: {{id}} </li>
                     <li class="list-group-item hidden">Created Date: {{createdAt}} </li> -->
                 </ul>

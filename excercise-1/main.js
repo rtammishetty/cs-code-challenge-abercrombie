@@ -11,7 +11,9 @@ fetch(baseUrl)
             let data = response[i];
             let dataStamp = {
                 name: data.name,
-                avatar: data.avatar
+                avatar: data.avatar,
+                id: data.id,
+                createdAt: data.createdAt
             }
             let templates = template(dataStamp)
             $('.content-placeholder').append(templates);

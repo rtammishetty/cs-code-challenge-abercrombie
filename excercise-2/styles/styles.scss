@@ -19,12 +19,14 @@ html body {
         flex: auto;
     }
 
-    li, h3 {
+    li,
+    h3 {
         clear: both;
         list-style: none;
     }
 
-    input, button {
+    input,
+    button {
         outline: none;
     }
 
@@ -43,9 +45,9 @@ html body {
         color: #333;
     }
 
-
     /* Heading */
-    h3, label[for='new-task'] {
+    h3,
+    label[for="new-task"] {
         color: #333333;
         font-weight: 700;
         font-size: 15px;
@@ -68,8 +70,8 @@ html body {
         color: #888;
     }
 
-    input[type="text"] :focus {
-        color: #333;
+    input[type="text"]:focus {
+        outline: 1px solid #32a1ce;
     }
 
     input#new-task {
@@ -77,8 +79,8 @@ html body {
         display: inline-flex;
     }
 
-    p>button :hover {
-        color: #0FC57C;
+    p > button :hover {
+        color: #0fc57c;
     }
 
     /* Task list */
@@ -88,27 +90,26 @@ html body {
         border-bottom: 1px solid #eee;
     }
 
-    li>input[type="checkbox"] {
+    li > input[type="checkbox"] {
         margin: 0 10px;
         position: relative;
         top: 15px;
     }
 
-    li>label {
+    li > label {
         font-size: 18px;
         line-height: 40px;
         width: 43%;
         padding: 0 0 0 11px;
     }
 
-    li>input[type="text"] {
+    li > input[type="text"] {
         width: 41%;
     }
 
-    li>.delete :hover {
-        color: #CF2323;
+    li > .delete :hover {
+        color: #cf2323;
     }
-
 
     /* Completed */
     #completed-tasks label {
@@ -117,18 +118,17 @@ html body {
     }
 
     /* Edit Task */
-    ul li input[type=text] {
+    ul li input[type="text"] {
         display: none;
     }
 
-    ul li.editMode input[type=text] {
+    ul li.editMode input[type="text"] {
         display: block;
     }
 
     ul li.editMode label {
         display: none;
     }
-
 }
 
 #new-task-label {
@@ -136,6 +136,10 @@ html body {
     margin: 0 0 20px;
 }
 
+button:focus,
+input[type="checkbox"]:focus {
+    outline: 2px solid #32a1ce;
+}
 
 /* For Mobile */
 @media screen and (max-width: 375px) {
@@ -152,10 +156,9 @@ html body {
     }
 }
 
-@media screen and (min-width: 781px){
+@media screen and (min-width: 781px) {
     .container {
         width: 600px !important;
         margin: 100px 10%;
     }
 }
-
